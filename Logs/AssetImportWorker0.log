@@ -22,64 +22,65 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-57233
+63306
 Successfully changed project path to: /Volumes/HDD/unity/VR-refs
 /Volumes/HDD/unity/VR-refs
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 592.57 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 188.80 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.26f1 (7298b473bc1a)
 [Subsystems] Discovering subsystems at path /Volumes/HDD/unity/2020.3.16f1/2020.3.26f1/Unity.app/Contents/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path /Volumes/HDD/unity/VR-refs/Assets
 GfxDevice: creating device client; threaded=0
-2022-02-07 10:21:40.845 Unity[15222:798792] Color LCD preferred device: NVIDIA GeForce GT 650M (high power)
-2022-02-07 10:21:40.845 Unity[15222:798792] Metal devices available: 2
-2022-02-07 10:21:40.845 Unity[15222:798792] 0: NVIDIA GeForce GT 650M (high power)
-2022-02-07 10:21:40.845 Unity[15222:798792] 1: Intel HD Graphics 4000 (low power)
-2022-02-07 10:21:40.847 Unity[15222:798792] Using device NVIDIA GeForce GT 650M (high power)
+2022-03-09 13:43:32.320 Unity[30603:768758] Color LCD preferred device: NVIDIA GeForce GT 650M (high power)
+2022-03-09 13:43:32.320 Unity[30603:768758] Metal devices available: 2
+2022-03-09 13:43:32.320 Unity[30603:768758] 0: NVIDIA GeForce GT 650M (high power)
+2022-03-09 13:43:32.320 Unity[30603:768758] 1: Intel HD Graphics 4000 (low power)
+2022-03-09 13:43:32.321 Unity[30603:768758] Using device NVIDIA GeForce GT 650M (high power)
 Initializing Metal device caps: NVIDIA GeForce GT 650M
 Initialize mono
 Mono path[0] = '/Volumes/HDD/unity/2020.3.16f1/2020.3.26f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Volumes/HDD/unity/2020.3.16f1/2020.3.26f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = '/Volumes/HDD/unity/2020.3.16f1/2020.3.26f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56222
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56603
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Volumes/HDD/unity/2020.3.16f1/2020.3.26f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: /Volumes/HDD/unity/2020.3.16f1/2020.3.26f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.187186 seconds.
+Registered in 0.165288 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 88.87 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 64.83 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.691 seconds
+- Completed reload, in  1.219 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1712ms)
-		BeginReloadAssembly (352ms)
+	ReloadAssembly (1219ms)
+		BeginReloadAssembly (58ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (2ms)
-		EndReloadAssembly (1028ms)
-			LoadAssemblies (355ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (878ms)
+			LoadAssemblies (94ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (360ms)
+			SetupTypeCache (296ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (66ms)
-			SetupLoadedEditorAssemblies (418ms)
+			RebuildScriptCaches (59ms)
+			SetupLoadedEditorAssemblies (360ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
+				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (89ms)
-				BeforeProcessingInitializeOnLoad (51ms)
-				ProcessInitializeOnLoadAttributes (196ms)
-				ProcessInitializeOnLoadMethodAttributes (72ms)
+				RefreshPlugins (65ms)
+				BeforeProcessingInitializeOnLoad (50ms)
+				ProcessInitializeOnLoadAttributes (142ms)
+				ProcessInitializeOnLoadMethodAttributes (95ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.240494 seconds.
+Registered in 0.134417 seconds.
+Begin MonoManager ReloadAssembly

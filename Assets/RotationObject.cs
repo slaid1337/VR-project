@@ -4,39 +4,23 @@ using UnityEngine;
 
 public class RotationObject : MonoBehaviour
 {
-    public GameObject target;
-    public GameObject player;
-    private Vector3 randomDirection;
-    public float speed;    
+    [SerializeField] private Transform[] controlPoints;
 
+    private Vector3 gismosPosition;
 
-    private void Start()
+    private void OnDrawGizmos()
     {
-        randomDirection = new Vector3(Random.Range(-90f, 90f), Random.Range(-90f, 90f), Random.Range(-90f, 90f));
-    }
-
-    private void FixedUpdate()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
+        for (float t = 0; t < 1; t+=0.05f)
         {
-            randomDirection = new Vector3(Random.Range(-90f, 90f), Random.Range(-90f, 90f), Random.Range(-90f, 90f));
+            gismosPosition = Mathf.Pow(1 - t, 3) * controlPoints[0].position +
+                3 * Mathf.Pow(1 - t, 2) * t * controlPoints[1].position +
+                3 * (1 - t) * Mathf.Pow(t, 2) * controlPoints[2].position +
+                Mathf.Pow(t, 3) * controlPoints[3].position;
 
-        }
-        transform.LookAt(player.transform);
-        transform.RotateAround(target.transform.position, randomDirection, speed * Time.fixedDeltaTime);
-        Debug.Log(transform.position - target.transform.position);
-        if (Vector3.Angle(target.transform.forward, transform.position - target.transform.position) >= 60f || (transform.position - target.transform.position).y <= -20f)
-        {
-            randomDirection *= -1;
-            StartCoroutine(ChangeDirection());
+            Gizmos.DrawSphere(gismosPosition, 0.25f);
         }
 
-    }
-
-    private IEnumerator ChangeDirection()
-    {
-        yield return new WaitForSeconds(2f);
-
-        randomDirection = new Vector3(Random.Range(-90f, 90f), Random.Range(-90f, 90f), Random.Range(-90f, 90f));
+        Gizmos.DrawLine(new Vector3(controlPoints[0].position.x, controlPoints[0].position.y, controlPoints[0].position.z), new Vector3(controlPoints[1].position.x, controlPoints[1].position.y, controlPoints[1].position.z));
+        Gizmos.DrawLine(new Vector3(controlPoints[2].position.x, controlPoints[2].position.y, controlPoints[2].position.z), new Vector3(controlPoints[3].position.x, controlPoints[3].position.y, controlPoints[3].position.z));
     }
 }

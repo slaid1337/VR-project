@@ -10,14 +10,14 @@ public class GunController : MonoBehaviour
     [SerializeField] private GameObject _bullet;
     [SerializeField] private GameObject _bulletPlace;
     private float _delay;
-    private float _delayDuration;
-    private float _switcherSpeed;
-    private float _toHigherDelay;
+    [SerializeField] private float _delayDuration;
+    [SerializeField] private float _switcherSpeed;
+    [SerializeField] private float _toHigherDelay;
     private float _switcher;
     private float _startToHigherDelay;
     private float _startDelayDuration;
 
-    private SteamVR_Action_Boolean _fireAction;
+    [SerializeField] private SteamVR_Action_Boolean _fireAction;
     private Interactable interactable;
 
 
@@ -33,13 +33,12 @@ public class GunController : MonoBehaviour
 
     private void Update()
     {
-        if (interactable.attachedToHand != null)
-        {
+        //if (interactable.attachedToHand != null)
+        //{
             SteamVR_Input_Sources source = interactable.attachedToHand.handType;
 
 
-            if (_fireAction[source].stateDown)
-            {
+            
                 if (Input.GetKey(KeyCode.Space))
                 {
                     if (_delay >= 1)
@@ -76,8 +75,8 @@ public class GunController : MonoBehaviour
                         _switcher -= Time.fixedDeltaTime * _switcherSpeed;
                     }
                 }
-            }
-        }
+            
+        //}
         
         _delay += Time.fixedDeltaTime * _delayDuration;
     }

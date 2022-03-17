@@ -1,0 +1,24 @@
+{
+  "actions": [
+    {
+      "name": "/actions/gun/in/NewAction",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/NewSet/in/GunFire",
+      "type": "boolean"
+    }
+  ],
+  "action_sets": [
+    {
+      "name": "/actions/gun",
+      "usage": "single"
+    },
+    {
+      "name": "/actions/NewSet",
+      "usage": "single"
+    }
+  ],
+  "default_bindings": [],
+  "localization": []
+}

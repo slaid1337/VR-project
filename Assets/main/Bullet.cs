@@ -19,6 +19,14 @@ public class Bullet : MonoBehaviour
         StartCoroutine(DeleteBullet());
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "enemy")
+        {
+            other.GetComponent<DroneController>().Damage(2);
+        }
+    }
+
     private IEnumerator DeleteBullet()
     {
         yield return new WaitForSeconds(2f);

@@ -53,18 +53,16 @@
     <UnityVersion>2020.3.26f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets/main/Weapon.cs" />
     <Compile Include="Assets/Nokobot/Modern Guns - Handgun/_Demo Assets/SimpleShoot.cs" />
     <Compile Include="Assets/main/Bullet.cs" />
     <Compile Include="Assets/RotationObject.cs" />
     <Compile Include="Assets/main/Attach.cs" />
-    <Compile Include="Assets/Drone_Guard/Animation/AnimContr.cs" />
     <Compile Include="Assets/main/GunController.cs" />
-    <Compile Include="Assets/main/TestRotation.cs" />
-    <Compile Include="Assets/main/Weapon.cs" />
+    <Compile Include="Assets/main/DroneController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Nokobot/Modern Guns - Handgun/README.txt" />
-    <None Include="Assets/Drone_Guard/Read me.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -726,6 +724,10 @@
     <ProjectReference Include="SteamVR_Editor.csproj">
       <Project>{7E9BA824-F388-6E05-6B4C-43C1CD5F0C1C}</Project>
       <Name>SteamVR_Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="SteamVR_Actions.csproj">
+      <Project>{1E811E46-D489-53EA-7803-B7F2EA8FB481}</Project>
+      <Name>SteamVR_Actions</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
